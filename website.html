@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 1</title>
+    <link href="website.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"> <!-- Add the slideshow styles -->
+</head>
+<body>
+    <div class="background">
+        <row>
+            <div class="notify-menu">
+                <logo>
+                    <img src="LOGO.png" class="logo" width="95" height="95"/>
+                </logo>
+                <nav>
+                    <ul class="main-menu">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li class="dropdown">
+                            <a>Recipes</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Adobo</a></li>
+                                <li><a href="#">Sinigang</a></li>
+                                <li><a href="#">Pancit</a></li>
+                                <li><a href="#">Lechon</a></li>
+                            </ul>
+                        <li>Contact</li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </row>
+        <row>
+            <h1 class="title">PINOY RECIPES</h1>
+        </row> 
+    </div>
+    <div class="sections">
+        <section id="section1" class="section-bg1">
+            <div class="overlay">
+                <img src="section1.jpg" class="image" alt="Background Image">
+                <div class="text">
+                    <h2>Happy tummy, <br>happy life</h2>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Manual Slideshow -->
+        <h2 class="menu">MENU</h2>
+
+        <div class="w3-content w3-display-container slideshow">
+            <div class="mySlides">
+                <img src="adobochicken.png" style="width:100%" alt="Adobo Chicken">
+                <div class="texted">Adobo Chicken</div>
+            </div>
+            <div class="mySlides">
+                <img src="sinigang.jpg" style="width:100%" alt="Sinigang">
+                <div class="texted">Sinigang</div>
+            </div>
+            <div class="mySlides">
+                <img src="pancit.jpg" style="width:100%" alt="Pancit">
+                <div class="texted">Pancit</div>
+            </div>
+
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <section id="section3" class="section-bg3">
+        <h2>About Us</h2>
+        <p>Jane and John recipe, a website of a filipino food recipe,
+         <br><br> is dedicated to delivering high-quality and innovative food recipes to consumers nationwide.
+         <br><br> From farm to table, we prioritize sourcing the finest ingredients
+         <br><br> and implementing rigorous quality control measures to ensure the utmost freshness, flavor, and nutritional value in every product.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
