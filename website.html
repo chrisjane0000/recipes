@@ -8,42 +8,58 @@
 </head>
 <body>
     <div class="background">
+        <div class="color-overlay"></div>
+</div>
         <row>
-            <div class="notify-menu">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#" class="dropdown">
+    Recipes
+    <ul class="dropdown-menu">
+                    <li><a href="#">Adobo</a></li>
+                    <li><a href="#">Sinigang</a></li>
+                    <li><a href="#">Pancit</a></li>
+                    <li><a href="#">Lechon</a></li>
+    </ul>
+                </a>
+                <a href="#">Contact</a>
+    </div>
+            
+    <div class="notify-menu">
                 <logo>
-                    <img src="LOGO.png" class="logo" width="95" height="95"/>
+    <img src="LOGO.png" class="logo" width="95" height="95"/>
                 </logo>
                 <nav>
-                    <ul class="main-menu">
-                        <li>Home</li>
-                        <li>About</li>
-                        <li class="dropdown">
-                            <a>Recipes</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Adobo</a></li>
-                                <li><a href="#">Sinigang</a></li>
-                                <li><a href="#">Pancit</a></li>
-                                <li><a href="#">Lechon</a></li>
-                            </ul>
-                        <li>Contact</li>
-                        </li>
-                    </ul>
+    <ul class="main-menu">
+                    <li onclick="openNav()">&#9776; </li>
+    </ul>
                 </nav>
-            </div>
+    </div>
+                
+    <script>
+    function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
         </row>
         <row>
             <h1 class="title">PINOY RECIPES</h1>
         </row> 
     </div>
     <div class="sections">
-        <section id="section1" class="section-bg1">
-            <div class="overlay">
-                <img src="section1.jpg" class="image" alt="Background Image">
-                <div class="text">
-                    <h2>Happy tummy, <br>happy life</h2>
-                </div>
+        <section id="section1" class="section-bg1 overlay">
+            <img src="section1.jpg" class="image" alt="Background Image">
+            <div class="text">
+                <h2>Happy tummy, <br>happy life</h2>
             </div>
         </section>
+    </div>
+    
         
         
         <!-- Manual Slideshow -->
@@ -90,9 +106,9 @@
     <section id="section3" class="section-bg3">
         <h2>About Us</h2>
         <p>Jane and John recipe, a website of a filipino food recipe,
-         <br><br> is dedicated to delivering high-quality and innovative food recipes to consumers nationwide.
-         <br><br> From farm to table, we prioritize sourcing the finest ingredients
-         <br><br> and implementing rigorous quality control measures to ensure the utmost freshness, flavor, and nutritional value in every product.</p>
+    <br><br> is dedicated to delivering high-quality and innovative food recipes to consumers nationwide.
+    <br><br> From farm to table, we prioritize sourcing the finest ingredients
+    <br><br> and implementing rigorous quality control measures to ensure the utmost freshness, flavor, and nutritional value in every product.</p>
     </section>
     <footer>
         <p>&copy; 2024 My Website. All rights reserved.</p>
